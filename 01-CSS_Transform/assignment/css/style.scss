@@ -1,3 +1,50 @@
+// Variables
+$card-bg: #ffffff;
+$card-hover-bg: #f0f8ff;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$card-hover-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+$transition-duration: 0.4s;
+$transform-scale: 1.05;
+
+// Mixin for transition
+@mixin smooth-transition($props...) {
+  transition: $props $transition-duration ease-in-out;
+}
+
+// Base styles using BEM naming
+.card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+
+  &__card {
+    background-color: $card-bg;
+    box-shadow: $card-shadow;
+    padding: 2rem;
+    border-radius: 1rem;
+    @include smooth-transition(box-shadow, transform);
+
+    &:hover {
+      transform: scale($transform-scale) rotate(1deg);
+      box-shadow: $card-hover-shadow;
+      background-color: $card-hover-bg;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: #444;
+  }
+}
+
+// Additional styles
 h1 {
   color: dodgerblue;
 }
