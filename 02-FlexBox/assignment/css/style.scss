@@ -4,6 +4,13 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Layout container styles
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 // Grid layout for main content sections
 .layout__main {
   display: grid;
