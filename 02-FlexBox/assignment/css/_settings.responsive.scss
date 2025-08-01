@@ -43,3 +43,11 @@ $breakpoints: (
     align-items: center;
   }
 }
+
+// Direct media query for extra clarity or fallback
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
