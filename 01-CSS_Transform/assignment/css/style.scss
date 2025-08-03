@@ -1,3 +1,73 @@
+// Variables
+$card-bg: #f8f9fa;
+$card-hover-bg: #f0f8ff;
+$card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$card-hover-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+$card-border: #dee2e6;
+$transition-duration: 0.6s;
+$transform-scale: 1.05;
+
+// Mixin for transition
+@mixin smooth-transition($props...) {
+  transition: $props $transition-duration ease-in-out;
+}
+
+// Base styles using BEM naming
+.card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+
+  &__card {
+    width: 300px;
+    height: 200px;
+    background-color: $card-bg;
+    box-shadow: $card-shadow;
+    border-radius: 1rem;
+    padding: 2rem;
+    perspective: 1000px;
+    @include smooth-transition(box-shadow, transform);
+
+    &:hover {
+      transform: scale($transform-scale) rotate(1deg);
+      box-shadow: $card-hover-shadow;
+      background-color: $card-hover-bg;
+
+      .card-section__content {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    background: $card-bg;
+    border: 1px solid $card-border;
+    border-radius: 8px;
+    @include smooth-transition(transform);
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: #444;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+// Additional styles
 h1 {
   color: dodgerblue;
 }
