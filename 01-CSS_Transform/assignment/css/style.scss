@@ -1,14 +1,5 @@
 // Variables
 $card-bg: #f8f9fa;
-$transition-speed: 0.5s;
-
-// Mixin for smooth transition
-@mixin smooth-transition($property) {
-  transition: $property $transition-speed ease-in-out;
-}
-
-// Variables
-$card-bg: #f8f9fa;
 $card-hover-bg: #f0f8ff;
 $card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 $card-hover-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
@@ -60,9 +51,6 @@ $transform-scale: 1.05;
     @include smooth-transition(transform);
     transform-style: preserve-3d;
     transform: rotateY(0deg);
-    // Flip card content on hover using transform and transition
-    // Added for clarity and DRYness
-    background-color: $card-bg;
   }
 
   &__title {

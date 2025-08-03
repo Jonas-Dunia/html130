@@ -4,3 +4,26 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+// Layout container styles
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+// Grid layout for main content sections
+.layout__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
