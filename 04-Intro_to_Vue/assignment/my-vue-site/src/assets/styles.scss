@@ -1,0 +1,18 @@
+// styles.scss
+$brand-primary: #0d6efd; // matches my previous navbar blue
+
+.app-light {
+  background: #f8f9fa;  // Bootstrap’s light
+  color: #212529;
+}
+
+.app-dark {
+  background: #212529;
+  color: #f8f9fa;
+}
+
+/* Utility to size demo images similar to my Lesson 06 pages */
+.demo-img {
+  width: 20%;
+  height: auto;
+}
