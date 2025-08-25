@@ -27,6 +27,12 @@
       </b-collapse>
     </b-navbar>
 
+    <!-- Lesson 05: named-slot header component -->
+    <HeaderBar>
+      <template v-slot:title>RuralNotes Gallery</template>
+      <template v-slot:subtitle>Components, props, mixins &amp; slots (Lesson 08)</template>
+    </HeaderBar>
+
     <!-- Routed pages render here -->
     <b-container class="pb-5">
       <router-view />
@@ -35,8 +41,11 @@
 </template>
 
 <script>
+import HeaderBar from '@/components/HeaderBar.vue'
+
 export default {
   name: 'AppShell',
+  components: { HeaderBar },
   data() {
     return { darkMode: false } // Bonus: Vue-driven CSS theme toggle
   }

@@ -13,7 +13,7 @@ export default new Router({
   mode: 'history',
   routes: [
     { path: '/', name: 'Home', component: HomeView },
-    { path: '/images', name: 'Images', component: ImagesPage },
+    { path: '/images', name: 'Images', component: ImagesPage }, // already registered
     { path: '/grid', name: 'Grid', component: GridPage },
     { path: '/accordion', name: 'Accordion', component: AccordionPage }
   ],
